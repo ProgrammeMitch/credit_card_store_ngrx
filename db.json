@@ -1,0 +1,18 @@
+{
+    "credit_card": [
+        {
+            "creditCardNumber": "9882399923889293",
+            "cardHolder": "John Doe",
+            "expirationDate": "2020/12",
+            "securityCode": "099",
+            "amount": 23489
+        },
+        {
+            "creditCardNumber": "9882342492384645",
+            "cardHolder": "Jane Doe",
+            "expirationDate": "2021/02",
+            "securityCode": "099",
+            "amount": 5000
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+<input type="button" value="XXX" (click)='display()'>
+<div *ngIf = displaying>
+  <tr *ngFor="let credit_cards of (credit_card$ | async)">
+    <th scope="row">{{credit_cards.creditCardNumber}}</th>
+    <th scope="row">{{credit_cards.cardHolder}}</th>
+    <th scope="row">{{credit_cards.expirationDate}}</th>
+    <th scope="row">{{credit_cards.securityCode}}</th>
+    <th scope="row">{{credit_cards.amount}}</th>
+</tr>
+</div>

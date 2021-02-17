@@ -1,0 +1,8 @@
+<form [formGroup]="creditCardDetails" (ngSubmit)="onSubmit()">
+    <label>Credit Card Number: <input type="text" formControlName="creditCardNumber" required></label>
+    <label>Card Holder: <input type="text" formControlName="cardHolder" required></label>
+    <label>Expiration Date: <input type="text" formControlName="expirationDate" required></label>
+    <label>Security Code: <input type="text" formControlName="securityCode" maxlength="3"></label>
+    <label>amount: <input type="text" formControlName="amount" required></label>
+    <button type="submit" [disabled]="!creditCardDetails.valid">Submit</button>
+</form>
