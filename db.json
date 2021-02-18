@@ -1,116 +1,12 @@
 {
   "credit_card": [
     {
-      "id": 1,
-      "creditCardNumber": "9882399923889293",
-      "cardHolder": "John Doe",
-      "expirationDate": "2020/12",
-      "securityCode": "099",
-      "amount": 23489
-    },
-    {
-      "id": 2,
-      "creditCardNumber": "9882342492384645",
-      "cardHolder": "Jane Doe",
-      "expirationDate": "2021/02",
-      "securityCode": "099",
-      "amount": 5000
-    },
-    {
-      "id": "3",
-      "creditCardNumber": "bnnb",
-      "cardHolder": "nbnb",
-      "expirationDate": "bmm",
-      "securityCode": "nmm",
-      "amount": "3535"
-    },
-    {
-      "id": "5",
-      "creditCardNumber": "nbnb",
-      "cardHolder": "nmkkh",
-      "expirationDate": ",jkj",
-      "securityCode": "jkk",
-      "amount": "jkk"
-    },
-    {
-      "id": "uut",
-      "creditCardNumber": "kjkhi",
-      "cardHolder": "jljl",
-      "expirationDate": "jkkj",
-      "securityCode": "ioo",
-      "amount": "uoiu"
-    },
-    {
-      "id": "677676",
-      "creditCardNumber": "bbn",
-      "cardHolder": "hjjh",
-      "expirationDate": "jhjh",
-      "securityCode": "hhj",
-      "amount": "hhj"
-    },
-    {
-      "id": "6",
-      "creditCardNumber": "jgg",
-      "cardHolder": "hjjh",
-      "expirationDate": "juiu",
-      "securityCode": "uii",
-      "amount": "hyiy"
-    },
-    {
-      "id": "67",
-      "creditCardNumber": "gjgh",
-      "cardHolder": "hjjh",
-      "expirationDate": "hhjjh",
-      "securityCode": "gjj",
-      "amount": "hjjh"
-    },
-    {
-      "id": 5.1809158922085246,
-      "creditCardNumber": "99239993299392",
-      "cardHolder": "Martha Steward",
-      "expirationDate": "04/23",
-      "securityCode": "993",
-      "amount": "N40,000"
-    },
-    {
-      "id": 7.389272652099268,
-      "creditCardNumber": "82827883826376",
-      "cardHolder": "Godwin Uwak",
-      "expirationDate": "23/02",
-      "securityCode": "928",
-      "amount": "50,923"
-    },
-    {
-      "id": 5.8447147105461354,
-      "creditCardNumber": "84299429742929",
-      "cardHolder": "Geread",
-      "expirationDate": "12/12",
-      "securityCode": "333",
-      "amount": "23,553"
-    },
-    {
-      "id": 5.7141240410063805,
-      "creditCardNumber": "098766",
-      "cardHolder": "nnnn",
-      "expirationDate": "nnnnn",
-      "securityCode": "876",
-      "amount": "987655"
-    },
-    {
       "id": 6.292958821341852,
       "creditCardNumber": "45664264655554",
       "cardHolder": "Uvhe",
       "expirationDate": "34/34",
       "securityCode": "343",
       "amount": "343434"
-    },
-    {
-      "id": 4.970193419370936,
-      "creditCardNumber": "888999",
-      "cardHolder": "Mathew",
-      "expirationDate": "23/45",
-      "securityCode": "889",
-      "amount": "32392"
     }
   ]
 }
