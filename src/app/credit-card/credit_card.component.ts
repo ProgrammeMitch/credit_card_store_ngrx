@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 export class CreditCardComponent implements OnInit {
 
   creditCardDetails: FormGroup;
-
+  idNumber = Math.random()*10;
   constructor(
     private fb: FormBuilder,
     private store: Store<fromCreditCard.AppState>
@@ -26,6 +26,7 @@ export class CreditCardComponent implements OnInit {
 
   ngOnInit() {
     this.creditCardDetails = this.fb.group({
+      id: new FormControl(''),
       creditCardNumber: new FormControl('', Validators.required),
       cardHolder: new FormControl('', Validators.required),
       expirationDate: new FormControl('', Validators.required),
@@ -40,6 +41,7 @@ export class CreditCardComponent implements OnInit {
     credit_card$.subscribe(currentCreditCard => {
       if (currentCreditCard) {
         this.creditCardDetails.patchValue({
+          id: currentCreditCard.id,
           creditCardNumber: currentCreditCard.creditCardNumber,
           cardHolder: currentCreditCard.cardHolder,
           expirationDate: currentCreditCard.expirationDate,
@@ -52,6 +54,7 @@ export class CreditCardComponent implements OnInit {
 
   onSubmit() {
     const newCreditCard: CreditCard = {
+      id: this.idNumber,
       creditCardNumber: this.creditCardDetails.get('creditCardNumber').value,
       cardHolder: this.creditCardDetails.get('cardHolder').value,
       expirationDate: this.creditCardDetails.get('expirationDate').value,
@@ -60,6 +63,8 @@ export class CreditCardComponent implements OnInit {
     };
 
     this.store.dispatch(new credit_cardActions.CreateCreditCard(newCreditCard))
+
+    this.creditCardDetails.reset();
   }
 
 }

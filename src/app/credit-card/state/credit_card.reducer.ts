@@ -11,7 +11,7 @@ import { Action } from 'rxjs/internal/scheduler/Action';
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 
 export interface CreditCardState extends EntityState<CreditCard>{
-    selectedCreditCardId: number | null;
+    selectedCreditCardId: 1;
     loading: boolean;
     loaded: boolean;
     error: string;
@@ -40,7 +40,7 @@ export function credit_cardReducer(
 ): CreditCardState {
     switch(action.type) {
         case credit_cardActions.CreditCardActionTypes.LOAD_CREDITCARD_SUCCESS: {
-            return credit_cardAdapter.addOne(action.payload, {
+            return credit_cardAdapter.addMany(action.payload, {
                 ...state,
                 loading: false,
                 loaded: true
@@ -104,5 +104,5 @@ export const getCurrentCreditCardId = createSelector(
 export const getCurrentCreditCard = createSelector(
     getCreditCardFeatureState,
     getCurrentCreditCardId,
-    state => state.entities(state.selectedCreditCardId)
+    state => state.entities[state.selectedCreditCardId]
 );

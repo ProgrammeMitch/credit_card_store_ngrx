@@ -26,7 +26,7 @@ export class CreditCardEffect {
         mergeMap((action: credit_cardActions.LoadCreditCard) => 
             this.credit_cardService.getCreditCard().pipe(
                 map(
-                    (credit_card: CreditCard) =>
+                    (credit_card: CreditCard[]) =>
                     new credit_cardActions.LoadCreditCardSuccess(credit_card)
                 ),
                 catchError(err => of(new credit_cardActions.LoadCreditCardFail(err)))

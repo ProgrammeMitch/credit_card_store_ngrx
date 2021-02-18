@@ -24,7 +24,7 @@ export class LoadCreditCard implements Action {
 export class LoadCreditCardSuccess implements Action {
     readonly type = CreditCardActionTypes.LOAD_CREDITCARD_SUCCESS
 
-    constructor(public payload: CreditCard) {}
+    constructor(public payload: CreditCard[]) {}
 }
 
 export class LoadCreditCardFail implements Action {

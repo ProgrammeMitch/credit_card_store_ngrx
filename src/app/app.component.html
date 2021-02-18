@@ -1,11 +1,24 @@
 <router-outlet></router-outlet>
-<input type="button" value="XXX" (click)='display()'>
-<div *ngIf = displaying>
-  <tr *ngFor="let credit_cards of (credit_card$ | async)">
-    <th scope="row">{{credit_cards.creditCardNumber}}</th>
-    <th scope="row">{{credit_cards.cardHolder}}</th>
-    <th scope="row">{{credit_cards.expirationDate}}</th>
-    <th scope="row">{{credit_cards.securityCode}}</th>
-    <th scope="row">{{credit_cards.amount}}</th>
-</tr>
+<button type="button" (click)='display()'>{{ stores }}</button>
+<div *ngIf = displaying class="table wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th scope="row">creditCardNumber</th>
+        <th scope="row">cardHolder</th>
+        <th scope="row">expirationDate</th>
+        <th scope="row">securityCode</th>
+        <th scope="row">amount</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let credit_cards of (credit_card$ | async)">
+        <td>{{credit_cards.creditCardNumber}}</td>
+        <td>{{credit_cards.cardHolder}}</td>
+        <td>{{credit_cards.expirationDate}}</td>
+        <td>{{credit_cards.securityCode}}</td>
+        <td>{{credit_cards.amount}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
