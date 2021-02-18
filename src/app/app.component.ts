@@ -30,6 +30,12 @@ export class AppComponent {
     this.credit_card$ = this.store.pipe(select(fromCreditCard.getCreditCard))
   }
 
+  deleteCreditCard(credit_card: CreditCard) {
+    if (confirm('Areyou Sure?')) {
+      this.store.dispatch(new credit_cardActions.DeleteCreditCard(credit_card.id))
+    }
+  }
+
   
   constructor(private store: Store<any>) { }
 

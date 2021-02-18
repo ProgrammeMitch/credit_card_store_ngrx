@@ -11,7 +11,7 @@ import { Action } from 'rxjs/internal/scheduler/Action';
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 
 export interface CreditCardState extends EntityState<CreditCard>{
-    selectedCreditCardId: 1;
+    selectedCreditCardId: number;
     loading: boolean;
     loaded: boolean;
     error: string;
@@ -64,6 +64,17 @@ export function credit_cardReducer(
             return {
                 ...state,
                 error: action.payload
+            };
+        }
+
+        case credit_cardActions.CreditCardActionTypes.DELETE_CREDITCARD_SUCCESS: {
+            return credit_cardAdapter.removeOne(action.payload, state)
+        }
+
+        case credit_cardActions.CreditCardActionTypes.DELETE_CREDITCARD_FAIL: {
+            return {
+                ...state
+                //error: action.payload
             };
         }
 

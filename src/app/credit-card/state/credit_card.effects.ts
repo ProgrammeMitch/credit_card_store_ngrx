@@ -51,10 +51,10 @@ export class CreditCardEffect {
         )
     )
 
-    /**@Effect()
+    @Effect()
     deleteCreditCard$: Observable<Action> = this.actions$.pipe(
         ofType<credit_cardActions.DeleteCreditCard>(
-            credit_cardActions.CreditCardActionTypes.LOAD_CREDITCARD
+            credit_cardActions.CreditCardActionTypes.DELETE_CREDITCARD
         ),
         map((action: credit_cardActions.DeleteCreditCard) => action.payload),
         mergeMap((id: number) => 
@@ -66,5 +66,5 @@ export class CreditCardEffect {
                 catchError(err => of(new credit_cardActions.DeleteCreditCardFail(err)))
             )
         )
-    )*/
+    )
 }

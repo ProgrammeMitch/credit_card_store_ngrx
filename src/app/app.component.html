@@ -18,6 +18,9 @@
         <td>{{credit_cards.expirationDate}}</td>
         <td>{{credit_cards.securityCode}}</td>
         <td>{{credit_cards.amount}}</td>
+        <th>
+          <a (click)=deleteCreditCard(credit_card)>del</a>
+        </th>
       </tr>
     </tbody>
   </table>

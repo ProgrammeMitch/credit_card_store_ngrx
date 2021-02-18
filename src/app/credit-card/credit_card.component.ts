@@ -27,10 +27,10 @@ export class CreditCardComponent implements OnInit {
   ngOnInit() {
     this.creditCardDetails = this.fb.group({
       id: new FormControl(''),
-      creditCardNumber: new FormControl('', Validators.required),
+      creditCardNumber: new FormControl('', Validators.pattern('[0-9]*')),
       cardHolder: new FormControl('', Validators.required),
       expirationDate: new FormControl('', Validators.required),
-      securityCode: new FormControl(''),
+      securityCode: new FormControl('', Validators.pattern('[0-9]*')),
       amount: new FormControl('', Validators.required)
     });
 
@@ -65,6 +65,8 @@ export class CreditCardComponent implements OnInit {
     this.store.dispatch(new credit_cardActions.CreateCreditCard(newCreditCard))
 
     this.creditCardDetails.reset();
+
+    alert('Credit Card has been Created');
   }
 
 }

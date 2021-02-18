@@ -18,4 +18,8 @@ export class CreditCardService {
         console.log('presenceS')
         return this.http.post('http://localhost:3000/credit_card', credit_card)
     }
+
+    deleteCreditCard(id){
+        return this.http.delete('http://localhost:3000/credit_card/'+id);
+    }
 }
