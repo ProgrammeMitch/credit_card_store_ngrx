@@ -30,8 +30,9 @@ export class AppComponent {
     this.credit_card$ = this.store.pipe(select(fromCreditCard.getCreditCard))
   }
 
-  deleteCreditCard(credit_card: CreditCard) {
-    if (confirm('Areyou Sure?')) {
+  deleteCreditCard(credit_card: any) {
+    console.log(credit_card)
+    if (confirm('Are you Sure?')) {
       this.store.dispatch(new credit_cardActions.DeleteCreditCard(credit_card.id))
     }
   }

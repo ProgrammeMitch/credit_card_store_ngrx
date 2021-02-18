@@ -73,8 +73,8 @@ export function credit_cardReducer(
 
         case credit_cardActions.CreditCardActionTypes.DELETE_CREDITCARD_FAIL: {
             return {
-                ...state
-                //error: action.payload
+                ...state,
+                error: (action.payload).toString()
             };
         }
 
